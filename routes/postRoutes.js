@@ -7,10 +7,10 @@ const fs = require('fs');
 const router = express.Router();
 
 const db = mysql2.createConnection({
-  user:'root',
-  host:'localhost',
-  password:'sonia26082k1',
-  database:'photo_sharing_app'
+  user:process.env.DB_USERNAME,
+  host:process.env.DB_HOST,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 })
 
 router.post('/create',upload.single('postimg'),(req,res) => {
