@@ -2,7 +2,9 @@ const express = require('express');
 const mysql2=require('mysql2');
 const upload = require('../middleware.js')
 const path = require('path'); 
-const fs = require('fs');   
+const fs = require('fs'); 
+
+require('dotenv').config();
 
 const router = express.Router();
 

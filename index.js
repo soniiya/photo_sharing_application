@@ -16,6 +16,6 @@ app.use('/uploads', express.static('./uploads'));
 app.use('/user',userRoutes);
 app.use('/posts', postRoutes);
 
-app.listen(process.env.PORT || 3001,()=>{
+app.listen(3001,()=>{
     console.log("server on ")
 })
