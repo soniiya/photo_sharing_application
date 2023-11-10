@@ -57,7 +57,7 @@ router.delete('/delete/:id',(req,res)=>{
       return res.status(500).send("Error fetching image file path");
     }
     if (result.length === 0) {
-      console.log(result)
+      //console.log(result)
       // Handle the case where the post doesn't exist
       return res.status(404).send("Post not found");
     }
