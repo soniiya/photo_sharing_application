@@ -18,6 +18,6 @@ app.use(express.json())
 app.use('/user',userRoutes);
 app.use('/posts', postRoutes);
 
-app.listen(process.env.PORT || 3001,()=>{
+app.listen(process.env.PORT || 3002,()=>{
     console.log("server on ")
 })

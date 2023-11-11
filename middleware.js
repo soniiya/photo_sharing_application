@@ -7,8 +7,8 @@ require('dotenv').config();
 
 // Configure AWS
 AWS.config.update({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY,
 });
 
 const s3 = new AWS.S3();
@@ -16,7 +16,7 @@ const s3 = new AWS.S3();
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: process.env.S3_BUCKET_NAME,
+    bucket: process.env.CYCLIC_BUCKET_NAME,
     acl: 'public-read', // Adjust according to your needs
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });
