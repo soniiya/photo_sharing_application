@@ -11,7 +11,7 @@ const postRoutes = require('./routes/postRoutes.js')
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use('/uploads', express.static('./uploads'));
+//app.use('/uploads', express.static('./uploads'));
 
 app.use('/user',userRoutes);
 app.use('/posts', postRoutes);

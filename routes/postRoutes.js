@@ -20,7 +20,7 @@ router.post('/create',upload.single('postimg'),(req,res) => {
     const about = req.body.postabout;
     const destination = req.body.postdestination;
     const category = req.body.postcategory;
-    const imagePath = req.file.path;
+    const imagePath = req.file.location;
 
     //console.log(req.file)
 
