@@ -29,6 +29,8 @@ const upload = multer({
   })
 });
 
+console.log('S3 Bucket Name:', process.env.S3_BUCKET_NAME);
+
 module.exports = upload;
 
 
