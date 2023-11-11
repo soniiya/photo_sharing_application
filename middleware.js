@@ -12,6 +12,7 @@ AWS.config.update({
 });
 
 const s3 = new AWS.S3();
+//console.log(s3)
 
 const upload = multer({
   storage: multerS3({
@@ -29,7 +30,7 @@ const upload = multer({
   })
 });
 
-console.log('S3 Bucket Name:', process.env.CYCLIC_BUCKET_NAME);
+//console.log('Bucket Name:', process.env.CYCLIC_BUCKET_NAME);
 
 module.exports = upload;
 
