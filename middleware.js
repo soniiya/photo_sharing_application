@@ -16,7 +16,7 @@ const s3 = new AWS.S3();
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: cyclic-gold-filthy-trout-us-west-1,
+    bucket: process.env.CYCLIC_BUCKET_NAME,
     acl: 'public-read', // Adjust according to your needs
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });
@@ -29,7 +29,7 @@ const upload = multer({
   })
 });
 
-console.log('S3 Bucket Name:', process.env.S3_BUCKET_NAME);
+console.log('S3 Bucket Name:', process.env.CYCLIC_BUCKET_NAME);
 
 module.exports = upload;
 
